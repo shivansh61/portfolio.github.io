@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/dba466caa8.js" crossorigin="anonymous"></script>
+    <title>Shivansh-Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+
+
+            background-color: rgb(255, 254, 254);
+            color: rgb(255, 255, 255);
+            font-family: 'Poppins', sans-serif;
+
+            background: linear-gradient(rgba(94, 0, 141, 0.922), rgba(30, 6, 58, 0.906)), url(../images/header-background.jpg) center center no-repeat;
+        }
+
+        html{
+    scroll-behavior: smooth;
+}
+
+header{
+    position: sticky;
+            top: 0;
+            z-index: 100000;
+
+
+
+}
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 75px;
+            /* background-color: #0717ff; */
+            position: sticky;
+            top: 0;
+            z-index: 100000;
+
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 22px;
+            position: sticky;
+            top: 0;
+
+
+        }
+
+
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            transition: all 0.2s ease;
+        }
+
+
+        nav ul li a:hover {
+            color: rgba(74, 66, 66, 0.906);
+            font-size: 1.04rem;
+        }
+
+        main hr {
+
+            border: 0;
+            margin: 40px 84px;
+            background: rgba(129, 121, 139, 0.886);
+            height: 1.2px;
+        }
+
+
+        .left {
+            font-size: 2rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            margin: 150px 0;
+        }
+
+        .firstSection>div {
+            width: 32%;
+        }
+
+        .leftSection {
+            font-size: 2rem;
+            margin: 20px 0;
+
+        }
+
+        .rightSection img {
+            width: 80%;
+            /* margin: 50px 0; */
+        }
+
+        .purple {
+            color: rgba(137, 43, 226, 0.772);
+            font-size: 3rem;
+
+        }
+
+        #element {
+            color: blueviolet;
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+        }
+
+        .secondSection h1 {
+            font-size: 1.8rem;
+        }
+
+        .about_container {
+            padding: 50px 8%;
+            align-items: center;
+            justify-content: center;
+
+
+        }
+
+        .about_container .about_contents {
+            display: grid;
+            grid-template-columns: 1.8fr 5fr;
+            grid-gap: 10px;
+        }
+
+        .about_contents .imageSection {
+            position: relative;
+            height: 320px;
+            max-width: 250px;
+
+        }
+
+        .imageSection img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            position: relative;
+            z-index: 2;
+        }
+
+        .about_contents .imageSection::after {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            outline: 3px solid #787cb5;
+            top: 18px;
+            left: 18px;
+            z-index: 1;
+        }
+
+        .infoSection h1 {
+            color: rgb(199, 199, 199);
+            font-size: 34px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 6px;
+            position: relative;
+
+
+        }
+
+        .infoSection h1::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            top: 110%;
+            left: 0;
+            background-color: #aaabb0;
+        }
+
+        .infoSection h1::after {
+            content: '';
+            position: absolute;
+            width: 45%;
+            height: 4%;
+            top: calc(110% - 1px);
+            left: 0px;
+            background-color: #0717ff;
+        }
+
+        .infoSection h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            font-weight: 600px;
+            color: #787cb5;
+            padding: 14px 0px 15px;
+            text-transform: capitalize;
+            letter-spacing: 1px;
+
+
+
+
+        }
+
+        .infoSection p {
+            color: #aaabb0;
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: justify;
+            padding-bottom: 15px;
+
+        }
+
+        .PersonalInfo {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px 20px;
+            margin-top: 14px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #555;
+
+
+        }
+
+        .PersonalInfo div {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+        }
+
+
+        .PersonalInfo div span {
+            color: #aaabb0;
+            letter-spacing: 1.2px;
+
+        }
+
+        .infoSection button {
+            min-width: 150px;
+            padding: 8px 18px;
+            border: 1px solid #787cb5;
+            /* background-color: #7467c0e7; */
+            background-color: #382765;
+            border-radius: 25px;
+            font-size: 18px;
+            color: #aaabb0;
+            margin-top: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+
+
+        }
+
+        .infoSection button:hover {
+            /* color: #787cb5; */
+            border-color: #aaabb0;
+
+            /* border-color: rgba(141, 41, 236, 0.968); */
+            border-width: 2px;
+            border-bottom-style: dotted;
+            transition: ease-in;
+        }
+
+        .contact {
+            /* background-color: rgba(223, 223, 223, 0.153); */
+            height: 108%;
+            width: 100%;
+            margin: auto;
+            margin-bottom: 10%;
+
+        }
+
+        .text-center {
+            text-align: center;
+            padding-top: 15%;
+            font-size: 34px;
+
+            color: rgb(199, 199, 199);
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+            /* display: inline-block; */
+            /* margin-bottom: 6px; */
+            position: relative;
+
+
+
+        }
+
+        .form {
+            max-width: 60%;
+            margin: 28px auto;
+            /* color: rgb(0, 170, 255); */
+        }
+
+        .form input {
+            width: 100%;
+    padding: 8px 20px;
+    font-size: 15px;
+    border: 2px solid #7d908d9e;
+    border-radius: 20px;
+    margin: 16px 0;
+    color: rgb(247 250 252 / 73%);
+    background-color: #55138861;            }
+
+            .btn-dark{
+                /* color: black;
+    border: 2px solid gray;
+    padding: 5px 58px;
+    margin: 7px 3px;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #e4d2d230; */
+
+                /* min-width: 50px; */
+                padding: 8px 15px;
+                border: 1px solid #787cb5;
+                /* background-color: #7467c0e7; */
+                background-color: #52496c;
+                border-radius: 25px;
+                font-size: 15px;
+                color: #aaabb0;
+                margin-top: 15px;
+                cursor: pointer;
+                transition: all 0.3s;
+                /* position: absolute; */
+                margin: 0 46%;
+
+
+
+            }
+
+            .btn-dark:hover {
+                border-color: #aaabb0;
+
+                /* border-color: rgba(141, 41, 236, 0.968); */
+                border-width: 2px;
+                border-bottom-style: dotted;
+                transition: ease-in;
+            }
+
+            .text-footer {
+    text-align: center;
+    padding: 14px 0;
+    font-size: 14px;
+    font-weight: 300;
+    font-family:cursive;
+    background-color: #56528680;
+    color: rgb(205, 201, 201);
+
+}
+
+
+
+
+@media only screen and (max-width: 1420px){
+    .nav-list{
+             flex-direction:column;
+            }
+
+    div.block-1{
+        display: none;
+    }       
+    
+}
+
+
+
+
+
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Shivansh</div>
+            <div class"right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/">Project</a></li>
+                    <!-- <li><a href="/">Contact Me</a></li> -->
+                    <li><a href="#contact"></i>Contact Me</a></li>
+
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <script type="text/javascript">
+        window.addEvenListner("scroll", function(){
+            var header = docutment.querySelector("header");
+            header.classList.toggle("sticky",window.scrolly > 0);
+
+        
+            
+        })
+    </script>
+    <main>
+
+        <section class="firstSection">
+
+            <div class="leftSection">
+                Hi, My name is <span class="purple"> Shivansh</span>
+                and i am a passionate
+                <span id="element"></span>
+
+            </div>
+
+            <div class="rightSection">
+
+                <img src="bg.png.png" alt="Developer">
+
+            </div>
+
+        </section>
+        <hr>
+
+        <div class="about_container">
+
+            <div class="about_contents">
+
+                <section class="imageSection">
+
+                    <img src="about.png.jpg">
+
+                </section>
+
+                <section class="infoSection">
+                    <h1>About Me</h1>
+                    <h2>Web Developer | Android Developer</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nam vel eligendi? Ex, nulla!
+                        Recusandae quo est nihil similique exercitationem ullam facilis quas dolores illum ipsa iste
+                        voluptatem, quia mollitia molestias aspernatur, ab beatae dignissimos dolore reprehenderit!
+                        Deleniti beatae voluptatum suscipit, amet blanditiis vitae modi, error enim possimus, magni
+                        officia?</p>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ipsa quae ipsam veniam fuga
+                        esse maiores natus aperiam deleniti soluta!</p>
+
+
+                    <div class="PersonalInfo">
+
+                        <div><span>Name:</span><span>Shivansh</span></div>
+                        <div><span>Email:</span><span>shivanshshri925@gmail.com</span></div>
+                        <div><span>Education:</span><span>Pursuing MCA</span></div>
+                        <!-- <div><span>Email:</span><span>shivanshshri925@gmail.com</span></div> -->
+
+
+
+                    </div>
+
+                    <div class="button">
+                        <button>Download Resume</button>
+
+                    </div>
+            </div>
+            </section>
+
+            <!--********------ SKILL SECTION START********---- -->
+
+            <section class="Contact Me" id="Contact Me">
+
+                <h2 class="text-center">Contact Me<h2>
+
+                        <div class="form">
+                            <input type="text" name="name" id="name" placeholder="Name">
+                            <input type="text" name="Phone" id="name" placeholder="Phone">
+                            <input type="Email" name="Email" id="name" placeholder="Email">
+                            <div>
+                            <button class="btn-dark">Submit</button>
+                        </div>
+                        </div>
+            </section>
+
+        </main>
+
+
+            <footer>
+                <p class="text-footer">
+                Copyright &copy;2023- All rights reserved <br>
+                
+                                        SHIVANSH SHRIVASTAVA
+            </p>
+            
+            </footer>
+            
+
+
+
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></scrip>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Freelancer', 'Web Designer',],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
